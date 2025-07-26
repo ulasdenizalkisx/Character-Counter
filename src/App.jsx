@@ -5,7 +5,7 @@ import Header from "./Header.jsx";
 import TextArea from "./TextArea.jsx";
 import Footer from "./Footer.jsx";
 import React, {useState,useEffect} from 'react';
-import lightBg from "./assets/images/bg-light-theme.png";
+
 
 function App() {
 
@@ -17,9 +17,9 @@ function App() {
   useEffect(() => {
   if (toggleLightMode !== undefined) {
         const imageUrl = toggleLightMode ? 
-        "../public/bg-light-theme.png"
+        "./bg-light-theme.png"
         : 
-        "../public/bg-dark-theme.png"
+        "./bg-dark-theme.png"
         document.body.style.backgroundImage = `url(${imageUrl})`;
       };
   }, [toggleLightMode]);
