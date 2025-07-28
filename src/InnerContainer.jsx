@@ -1,9 +1,5 @@
 function InnerContainer({children}) {
 
-    const gap = {
-        
-    }
-
     return(
         <div className="inner_container">{children}</div>
     );

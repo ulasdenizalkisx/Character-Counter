@@ -11,7 +11,7 @@ function Logo(props) {
     const sendData = () => {
         const newMode = !lightMode;
         setLightMode(newMode);
-        props.onSend(lightMode);
+        props.onSendLogo(lightMode);
     }
 
     const alligner = {
@@ -20,34 +20,10 @@ function Logo(props) {
         justifyContent: 'space-between',
     }
 
-    const iconDivDark = {
-        border:'none',
-        width: '44px',
-        height: '44px',
-        borderRadius: '8px',
-        backgroundColor: 'var(--Neutral-700)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer'
-    }
-
-    const iconDivLight = {
-        border:'none',
-        width: '44px',
-        height: '44px',
-        borderRadius: '8px',
-        backgroundColor: 'var(--Neutral-100)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer'
-    }
-
     return( 
         <div style={alligner}>
-            <img src={props.mode ? lightLogo : darkLogo} alt="Logo"/>
-            <button onClick={sendData} style={props.mode ? iconDivLight : iconDivDark}><img src={props.mode ? lightModeButton:darkModeButton} alt="Mode Icon"/></button>
+            <img className="logo" src={props.mode ? lightLogo : darkLogo} alt="Logo"/>
+            <button className={`iconDiv ${props.mode ? 'iconDivLight' : 'iconDivDark'} `} onClick={sendData} ><img src={props.mode ? lightModeButton:darkModeButton} alt="Mode Icon"/></button>
         </div>
 
     );

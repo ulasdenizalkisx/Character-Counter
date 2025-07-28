@@ -94,6 +94,34 @@ html, body {
 
 /* Inner */
 
+.iconDiv {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconDivDark {
+  background-color: var(--Neutral-700);
+}
+
+.iconDivLight {
+  background-color: var(--Neutral-100);
+}
+
+.checkBoxAlligner {
+  width: 100%;
+  height: 31px;
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .text_area {
   width: 100%;
   height: 200px;
@@ -238,12 +266,16 @@ html, body {
 }
 
 .itemNumber {
+  position: relative;
+  z-index: 1;
   margin: 0;
   color: var(--Neutral-900);
 }
 
 .itemHeader {
   display: inline-block;
+  position: relative;
+  z-index: 1;
   margin-top: 8px;
   color: var(--Neutral-900);
 }
@@ -262,6 +294,212 @@ html, body {
   margin-top: 20px;
   color: var(--Neutral-200);
 }
+
+.error_div {
+  display:flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error_div span{
+  color: var(--Orange-800);
+}
+
+.chLimitInputDark {
+  width: 55px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid var(--Neutral-600);
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: var(--Neutral-0);
+}
+
+.chLimitInputLight {
+  width: 55px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid var(--Neutral-600);
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: var(--Neutral-900);
+}
+
+.displayNone {
+  display:none;
+}
+
+.displayBlock {
+  display:block;
+}
+
+.progressBarContainer {
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+
+.progressBarLetter {
+  color:var(--Neutral-200);
+  white-space: nowrap;
+}
+
+.progressBarLetterDark {
+  color:var(--Neutral-900);
+  white-space: nowrap;
+}
+
+.progressBar {
+  width: 859px;
+  height: 12px;
+  background-color: var(--Neutral-800);
+  border-radius: 999px;
+}
+
+.progressBarValue {
+  width:25%;
+  background-color: var(--Blue-400);
+  height: 12px;
+  border-radius: 999px;
+}
+
+.letterDensityContainer {
+  margin-top: 20px;
+  display:flex;
+  flex-flow:column nowrap;
+  gap: 12px;
+}
+
+.seeMoreCont {
+  margin-top: 20px;
+}
+
+.seeMoreButton{
+  border:none;
+  background: none;
+  cursor: pointer;
+  padding:0;
+}
+
+.seeMoreDark {
+  color: var(--Neutral-200);
+}
+
+.seeMoreLight {
+  color:var(--Neutral-900);
+}
+
+.innerAlligner {
+  display:flex;
+  flex-flow: row nowrap;
+  align-items:center;
+}
+
+.innerAlligner1 {
+  display:flex;
+  flex-flow: row nowrap;
+  align-items:center;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .inner_container {
+    width: 750px;
+  }
+  .progressBar {
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .inner_container {
+    width: 350px;
+  }
+  .progressBar {
+    width: 100%;
+  }
+
+  .textPreset1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .logo {
+    width: 184px;
+    height:30px;
+  }
+
+  .iconDiv {
+    width:32px;
+    height:32px;
+  }
+  
+  .checkBoxAlligner {
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .scblm {
+    margin:0;
+  }
+
+  .innerAlligner1 {
+    display:flex;
+    flex-flow: column nowrap;
+    align-items:flex-start;
+    gap: 8px;
+  }
+
+  .innerAlligner {
+    display:flex;
+    flex-flow: row nowrap;
+    align-items:center;
+    justify-content: flex-start;
+  } 
+
+  .chLimitInputDark {
+  width: 55px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid var(--Neutral-600);
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: var(--Neutral-0);
+}
+
+.chLimitInputLight {
+    width: 55px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    padding: 4px 12px;
+    color: var(--Neutral-900);
+  }
+
+  .statsContainer {
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+  }
+
+  .progressBar {
+    width: 250px;
+  }
+}
+
+
+
+
+
+
 
 
 
