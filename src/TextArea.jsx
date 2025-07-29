@@ -135,7 +135,7 @@ function TextArea(props) {
                             <label tabIndex={0} id="checkBox2" className={`${props.mode ? 'checkBoxLabel checkBoxLabelLight':'checkBoxLabel'} scblm ${isChecked2 ? 'checkBoxChecked' : null}`} htmlFor="setchlimit">{isChecked2 ? <img src={Tick} tabIndex={-1} alt="icon"/> : null}</label>
                             <input tabIndex={-1} id="setchlimit" onChange={handleChange2} name="setchlimit" className="checkBox" style={seperator} type="checkbox"/> 
                             <span style={spanStyle} className={props.mode ? 'textPreset4 colorLight':'textPreset4 color'}>Set Character Limit</span>
-                            <input onChange={handleLimit} maxLength={3} className={` ${isChecked2 ? "displayBlock" : "displayNone"} ${props.mode ? 'chLimitInputLight' :'chLimitInputDark'} scblm textPreset4`} type="text" id="chLimit" disabled={isDisabled}></input>
+                            <input type="number" onChange={handleLimit} maxLength={3} className={` ${isChecked2 ? "displayBlock" : "displayNone"} ${props.mode ? 'chLimitInputLight' :'chLimitInputDark'} scblm textPreset4`} id="chLimit" disabled={isDisabled}></input>
                         </div>
                     </div>
                     <span style={props.mode  ? colorLight :color} className="textPreset4">Approx. reading time: {readTime === undefined ? 0 : readTime} minutes</span>
